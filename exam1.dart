@@ -3,6 +3,7 @@
 
 class Solution {
   List<int> twoSum(List<int> nums, int target) {
+    /*
     // Brute force approach
     for(int i = 0; i < nums.length; i++) {
         for (int j = i + 1; j < nums.length; j++) {
@@ -11,6 +12,7 @@ class Solution {
             }
         }
     }
+    */
     // More efficient approach
     Map<int, int> past_nums = {};    
     for(int i = 0; i < nums.length; i++) {        
