@@ -13,15 +13,16 @@ class Solution {
         "M": 1000
     };
     int integer = table[s[0]]!;
-    for(int i = 1; i < s.length; i++) {    
-        var c = s[i]; 
-        var previousChar = s[i-1];
-        if(table[previousChar]! >= table[c]!) {
-            integer += table[c]!;
+    for(int i = 1; i < s.length; i++) {            
+        var previousNum = table[s[i-1]]!;
+        var currentNum = table[s[i]]!;
+        if(previousNum >= currentNum) {
+            integer += currentNum;
         } else {
-            integer = integer - table[previousChar]! + (table[c]! - table[previousChar]!);
-        }                    
+            integer = integer - previousNum + (currentNum - previousNum);
+        }                      
     }
-    return integer;    
+    // return 1000 + -1 * (100 - 1000) + -1 * (10 - 100) + -1 *(1 - 5);
+    return integer;
   }
 }
