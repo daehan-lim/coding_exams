@@ -20,11 +20,8 @@ class Solution {
             integer += table[c]!;
         } else {
             integer = integer - table[previousChar]! + (table[c]! - table[previousChar]!);
-        }      
-        
-        // return table[c]!;
+        }                    
     }
-
     return integer;    
   }
 }
