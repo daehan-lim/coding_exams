@@ -16,9 +16,10 @@ Explanation: Your function should return k = 5, with the first five elements of 
 */
 int removeDuplicates(List<int> nums) { // O(n^2)
   LinkedHashSet<int> orderedSet = LinkedHashSet();
-  for (var i = 0; i < nums.length; ++i) { // O(n)
-    orderedSet.add(nums[i]);
-  }
+  // for (var i = 0; i < nums.length; ++i) { // O(n)
+  //   orderedSet.add(nums[i]);
+  // }
+  orderedSet.addAll(nums); // O(n)
   nums.clear();
   nums.addAll(orderedSet); // O(n)
   return orderedSet.length;
